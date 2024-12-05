@@ -24,6 +24,7 @@ type LevelGLTFResult = GLTF & {
 
 export function Level() {
   const { nodes } = useGLTF("/level-react-draco.glb") as any;
+  const b = 0;
 
   return (
     <mesh

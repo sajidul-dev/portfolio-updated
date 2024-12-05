@@ -4,8 +4,6 @@ import Layout from "../components/Layout/Layout";
 import { Spinner } from "../components/Elements/Spinner/Spinner";
 import { lazyImport } from "../utils/lazyImport";
 
-const { Report } = lazyImport(() => import("../page/Report"), "Report");
-const { Users } = lazyImport(() => import("../page/Report"), "Users");
 const { Products } = lazyImport(() => import("../page/Report"), "Products");
 const { PurchaseHistory } = lazyImport(
   () => import("../page/Report"),

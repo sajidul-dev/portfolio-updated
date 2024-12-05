@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import profile from "../../../assets/img/profile.png";
 import { FaBitbucket, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -9,8 +9,6 @@ import { GoHomeFill } from "react-icons/go";
 import { RiTwitterXLine } from "react-icons/ri";
 
 export const Navbar = memo(() => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <nav className="side-bar bg-[#ebeef1] rounded-lg text-white shadow-lg w-64 lg:w-64 xl:w-64 ml-2 my-2 fixed flex justify-center content-between">
       <div className="h-full relative container mx-auto py-3 flex flex-col">
