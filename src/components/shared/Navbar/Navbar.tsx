@@ -10,7 +10,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 export const Navbar = memo(() => {
   return (
-    <nav className="side-bar bg-[#ebeef1] rounded-lg text-white shadow-lg w-64 lg:w-64 xl:w-64 ml-2 my-2 fixed flex justify-center content-between">
+    <nav className="side-bar bg-[#ebeef1] rounded-lg shadow-lg w-64 lg:w-64 xl:w-64 ml-2 my-2 fixed flex justify-center content-between">
       <div className="h-full relative container mx-auto py-3 flex flex-col">
         <div className="flex flex-col justify-center items-center mt-8">
           <NavLink
@@ -27,7 +27,7 @@ export const Navbar = memo(() => {
               />
             </div>
           </NavLink>
-          <p className="my-4 text-xl text-[#717171] font-semibold hover:text-black transition-all ease-in-out cursor-pointer">
+          <p className="my-4 text-xl text-[#717171] font-extrabold hover:text-black transition-all ease-in-out cursor-pointer">
             Md Sajidul Alam
           </p>
         </div>
@@ -95,7 +95,7 @@ export const Navbar = memo(() => {
             </li>
             <li>
               <NavLink
-                to="/products"
+                to="/achievements"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -110,7 +110,7 @@ export const Navbar = memo(() => {
             </li>
             <li>
               <NavLink
-                to="/purchase-history"
+                to="/about"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -125,7 +125,7 @@ export const Navbar = memo(() => {
             </li>
             <li>
               <NavLink
-                to="/purchase-history"
+                to="/contact"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -170,6 +170,12 @@ export const Navbar = memo(() => {
           </a>
           {/* <FaLinkedin />
           <RiTwitterXLine /> */}
+        </div>
+        <div className="my-5 flex justify-center items-center">
+          <p className="text-xs text-[#717171]">
+            Ⓒ {new Date().getFullYear()} <span>Md Sajidul Alam.</span> All
+            rights reserve
+          </p>
         </div>
       </div>
     </nav>

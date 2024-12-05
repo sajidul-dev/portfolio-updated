@@ -4,17 +4,18 @@ import Layout from "../components/Layout/Layout";
 import { Spinner } from "../components/Elements/Spinner/Spinner";
 import { lazyImport } from "../utils/lazyImport";
 
-const { Products } = lazyImport(() => import("../page/Report"), "Products");
-const { PurchaseHistory } = lazyImport(
-  () => import("../page/Report"),
-  "PurchaseHistory"
-);
 // const { PageNotFound } = lazyImport(
 //   () => import("../page/Report"),
 //   "PageNotFound"
 // );
 const { Landing } = lazyImport(() => import("../page/Landing"), "Landing");
 const { Projects } = lazyImport(() => import("../page/Projects"), "Projects");
+const { Achievements } = lazyImport(
+  () => import("../page/Achievements"),
+  "Achievements"
+);
+const { About } = lazyImport(() => import("../page/About"), "About");
+const { Contact } = lazyImport(() => import("../page/Contact"), "Contact");
 
 export const AppRoutes = () => {
   const routes = useMemo(
@@ -44,18 +45,26 @@ export const AppRoutes = () => {
             ),
           },
           {
-            path: "products",
+            path: "achievements",
             element: (
               <Suspense fallback={<Spinner />}>
-                <Products />
+                <Achievements />
               </Suspense>
             ),
           },
           {
-            path: "purchase-history",
+            path: "about",
             element: (
               <Suspense fallback={<Spinner />}>
-                <PurchaseHistory />
+                <About />
+              </Suspense>
+            ),
+          },
+          {
+            path: "contact",
+            element: (
+              <Suspense fallback={<Spinner />}>
+                <Contact />
               </Suspense>
             ),
           },
