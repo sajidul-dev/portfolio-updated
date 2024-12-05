@@ -13,3 +13,14 @@ body {
 .side-bar {
   height: calc(100vh - 18px);
 }
+
+.inset-center {
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

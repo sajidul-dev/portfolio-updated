@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router } from "react-router-dom";
 import { AppProviderProps } from "../types/app";
 import { Spinner } from "../components/Elements/Spinner/Spinner";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -15,6 +15,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       }
     >
       <QueryClientProvider client={queryClient}>
+        {/* <Route path="/" element={<Navigate to="/home" replace />} /> */}
         <Router>{children}</Router>
       </QueryClientProvider>
     </React.Suspense>

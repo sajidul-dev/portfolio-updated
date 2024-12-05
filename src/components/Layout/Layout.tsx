@@ -8,7 +8,7 @@ const Layout = () => {
       <div className="col-span-2 ">
         <Navbar />
       </div>
-      <div className="w-full mx-auto col-span-10 flex-grow pr-6 max-h-screen overflow-hidden">
+      <div className="w-full mx-auto col-span-10 flex-grow pr-6 max-h-screen overflow-x-hidden">
         <div className="">
           <TopNavbar />
         </div>

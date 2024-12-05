@@ -10,7 +10,7 @@ const TopNavbar = () => {
   let pageTitle;
 
   switch (location.pathname) {
-    case "/":
+    case "/home":
       pageTitle = "Home";
       break;
     case "/projects":

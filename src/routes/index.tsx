@@ -1,5 +1,5 @@
 import { Suspense, useMemo } from "react";
-import { useRoutes } from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 import { Spinner } from "../components/Elements/Spinner/Spinner";
 import { lazyImport } from "../utils/lazyImport";
@@ -11,6 +11,12 @@ const { PurchaseHistory } = lazyImport(
   () => import("../page/Report"),
   "PurchaseHistory"
 );
+// const { PageNotFound } = lazyImport(
+//   () => import("../page/Report"),
+//   "PageNotFound"
+// );
+const { Landing } = lazyImport(() => import("../page/Landing"), "Landing");
+const { Projects } = lazyImport(() => import("../page/Projects"), "Projects");
 
 export const AppRoutes = () => {
   const routes = useMemo(
@@ -20,18 +26,22 @@ export const AppRoutes = () => {
         element: <Layout />,
         children: [
           {
-            path: "report",
+            index: true,
+            element: <Navigate to="/home" replace />,
+          },
+          {
+            path: "home",
             element: (
               <Suspense fallback={<Spinner />}>
-                <Report />
+                <Landing />
               </Suspense>
             ),
           },
           {
-            path: "users",
+            path: "projects",
             element: (
               <Suspense fallback={<Spinner />}>
-                <Users />
+                <Projects />
               </Suspense>
             ),
           },
